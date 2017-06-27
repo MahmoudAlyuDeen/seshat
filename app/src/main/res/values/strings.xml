@@ -1,13 +1,16 @@
 <resources>
     <string name="app_name">Seshat</string>
     <string name="placeholder">Placeholder</string>
+    <string name="format_share_book">Check out this book:\n%1$s.\n\nBy %2$s</string>
+    <string name="format_share_book_title">Share %1$s</string>
 
     <!--main screen-->
+    <string name="error_loading_books">Error loading books. Swipe to retry</string>
 
     <!--information-->
 
     <!--errors and warnings-->
     <string name="error_connection">Can\'t connect to the internet</string>
     <string name="error_loading">Couldn\'t perform the requested action</string>
-    <string name="error_loading_books">Error loading books. Swipe to retry</string>
+
 </resources>

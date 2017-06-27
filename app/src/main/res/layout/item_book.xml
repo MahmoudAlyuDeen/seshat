@@ -9,7 +9,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/simple_padding_medium"
-        android:clickable="true"
         android:foreground="?attr/selectableItemBackground"
         app:cardCornerRadius="@dimen/card_view_corner_radius">
 

@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 
+import com.afterapps.seshat.Application;
 import com.afterapps.seshat.BaseActivity;
 import com.afterapps.seshat.R;
 import com.afterapps.seshat.beans.Book;
@@ -67,6 +68,7 @@ public class HomeActivity
     @Override
     public void onBooksReady(List<Book> bookList) {
         hideProgress();
+        ((Application) getApplication()).setBookList(bookList);
         displayBooks(bookList);
     }
 

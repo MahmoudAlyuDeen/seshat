@@ -7,6 +7,8 @@ package com.afterapps.seshat;
 @SuppressWarnings("unused")
 public class Constants {
 
+    public static final String BOOK_INDEX_EXTRA = "bookIndexExtra";
+
     private Constants() {
     }
 

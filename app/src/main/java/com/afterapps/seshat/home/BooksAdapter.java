@@ -1,6 +1,7 @@
 package com.afterapps.seshat.home;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,8 +9,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.afterapps.seshat.Constants;
 import com.afterapps.seshat.R;
 import com.afterapps.seshat.beans.Book;
+import com.afterapps.seshat.book.BookActivity;
 import com.bumptech.glide.Glide;
 
 import java.util.List;
@@ -57,6 +60,8 @@ class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.BookViewHolder> {
         ImageView mItemBookCoverImageView;
         @BindView(R.id.item_book_title_text_view)
         TextView mItemBookTitleTextView;
+        @BindView(R.id.item_book_author_text_view)
+        TextView mItemBookAuthorTextView;
 
         BookViewHolder(View itemView) {
             super(itemView);
@@ -72,10 +77,14 @@ class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.BookViewHolder> {
                     .placeholder(R.drawable.placeholder_book)
                     .into(mItemBookCoverImageView);
             mItemBookTitleTextView.setText(book.getTitle());
+            mItemBookAuthorTextView.setText(book.getAuthor());
         }
 
         @Override
         public void onClick(View v) {
+            Intent book = new Intent(mContext, BookActivity.class);
+            book.putExtra(Constants.BOOK_INDEX_EXTRA, getLayoutPosition());
+            mContext.startActivity(book);
 
         }
     }

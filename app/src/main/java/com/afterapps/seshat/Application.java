@@ -5,10 +5,24 @@ package com.afterapps.seshat;
  */
 
 
+import com.afterapps.seshat.beans.Book;
+
+import java.util.List;
+
 public class Application extends android.app.Application {
 
+    private List<Book> mBookList;
+
+    public List<Book> getBookList() {
+        return mBookList;
+    }
+
+    public void setBookList(List<Book> bookList) {
+        mBookList = bookList;
+    }
+
     @Override
-        public void onCreate() {
+    public void onCreate() {
         super.onCreate();
         //todo: enable un-comment out this before release
 //        Thread.setDefaultUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler() {
