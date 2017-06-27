@@ -13,7 +13,7 @@ import retrofit2.http.GET;
 
 public interface BooksService {
 
-    @GET("xyz-reader-json")
+    @GET("TNTest/xyzreader/master/data.json")
     Call<List<Book>> getBooks();
 
 }

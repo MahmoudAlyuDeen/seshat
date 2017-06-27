@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -69,15 +70,20 @@ class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.BookViewHolder> {
             itemView.setOnClickListener(this);
         }
 
-        void setBook(Book book) {
+        void setBook(final Book book) {
             Glide.with(mContext)
                     .load(book.getPhoto())
                     .centerCrop()
-                    .dontAnimate()
-                    .placeholder(R.drawable.placeholder_book)
                     .into(mItemBookCoverImageView);
             mItemBookTitleTextView.setText(book.getTitle());
             mItemBookAuthorTextView.setText(book.getAuthor());
+            mItemBookCoverImageView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+                @Override
+                public void onGlobalLayout() {
+                    mItemBookCoverImageView.getLayoutParams().height =
+                            (int) (mItemBookCoverImageView.getMeasuredWidth() / book.getAspectRatio());
+                }
+            });
         }
 
         @Override
@@ -85,7 +91,6 @@ class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.BookViewHolder> {
             Intent book = new Intent(mContext, BookActivity.class);
             book.putExtra(Constants.BOOK_INDEX_EXTRA, getLayoutPosition());
             mContext.startActivity(book);
-
         }
     }
 }

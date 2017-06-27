@@ -8,7 +8,7 @@
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/simple_padding_medium"
+        android:layout_margin="@dimen/simple_padding_small"
         android:foreground="?attr/selectableItemBackground"
         app:cardCornerRadius="@dimen/card_view_corner_radius">
 
@@ -18,7 +18,6 @@
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
-            android:src="@drawable/placeholder_book"
             tools:ignore="ContentDescription"/>
 
         <LinearLayout

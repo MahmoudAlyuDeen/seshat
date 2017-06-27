@@ -12,7 +12,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ServiceGenerator {
 
-    private static final String API_BASE_URL = "https://go.udacity.com/";
+    private static final String API_BASE_URL = "https://raw.githubusercontent.com/";
 
     private static Gson gson = new GsonBuilder()
             .setDateFormat("yyyy-MM-dd'T'HH:mm:ssZ")
