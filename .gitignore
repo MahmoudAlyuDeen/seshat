@@ -17,3 +17,4 @@ app/src/androidTest/
 app/src/main/res/drawable/
 app/src/test/
 /gradle/
+!/app/src/main/res/drawable/
