@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--ui colors-->
+    <color name="colorPrimary">#FF5722</color>
+    <color name="colorPrimaryDark">#E64A19</color>
+    <color name="colorAccent">#FFC107</color>
+    <color name="colorBackground">#F7F7F7</color>
+    <color name="colorForeground">@color/colorWhite</color>
+
+    <!--text colors-->
+    <color name="colorTextPrimary">#4a4a4a</color>
+    <color name="colorTextSecondary">#7e848d</color>
+
+    <!--basic colors-->
+    <color name="colorTransparent">#00000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorOpaqueBlack">#26000000</color>
+    <color name="colorLightGrey">#eeeeee</color>
+    <color name="colorDeepGrey">#262626</color>
+    <color name="colorGrey">#424242</color>
+
+</resources>
